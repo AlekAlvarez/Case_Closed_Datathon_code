@@ -105,14 +105,14 @@ class Agent:
             return False
 
         if use_boost and self.boosts_remaining <= 0:
-            print(f'Agent {self.agent_id} tried to boost but has no boosts remaining')
+            #print(f'Agent {self.agent_id} tried to boost but has no boosts remaining')
             use_boost = False
         
         num_moves = 2 if use_boost else 1
         
         if use_boost:
             self.boosts_remaining -= 1
-            print(f'Agent {self.agent_id} used boost! ({self.boosts_remaining} remaining)')
+            #print(f'Agent {self.agent_id} used boost! ({self.boosts_remaining} remaining)')
         
         for move_num in range(num_moves):
             cur_dx, cur_dy = self.direction.value
